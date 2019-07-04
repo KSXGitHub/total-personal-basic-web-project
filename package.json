@@ -9,13 +9,17 @@
     "js-yaml": "^3.6.1",
     "less": "^2.7.2",
     "jstransformer-markdown-it": "^2.0.0",
-    "standard": "^8.4.0"
+    "standard": "^8.4.0",
+    "snyk": "^1.189.0"
   },
   "scripts": {
     "compile": "node ./script/compile.js",
     "preview": "zsh -c 'sensible-browser ./out/index.html &; exit'",
-    "test": "standard && npm run compile"
+    "test": "standard && npm run compile",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Hoang Van Khai <hvksmr1996@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
